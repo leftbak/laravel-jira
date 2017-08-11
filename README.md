@@ -1,6 +1,6 @@
 # Laravel5 Jira service
 
-Easy access Jira rest api in Laravel5.
+Easy access Jira rest api in Laravel5 - forked from [univerze/laravel-jira](https://github.com/univerze/larave-jira)
 
 * [Installation and Requirements](#installation)
 * [Searching issues](#searching)
@@ -11,7 +11,7 @@ Easy access Jira rest api in Laravel5.
 ## Installation and Requirements
 
 ```sh
-composer require univerze/laravel-jira
+composer require leftbak/laravel-jira
 ```
 
 Afterwards, run `composer update` from your command line.
@@ -21,12 +21,12 @@ Then, update `config/app.php` by adding an entry for the service provider.
 ```php
 'providers' => [
     // ...
-    Univerze\Jira\JiraServiceProvider::class,
+    Leftbak\Jira\JiraServiceProvider::class,
 ];
 
 'aliases' => [
   	// ...
-  	'Jira' => Univerze\Jira\Facade\JiraFacade::class,
+  	'Jira' => Leftbak\Jira\Facade\JiraFacade::class,
 ];
 ```
 
