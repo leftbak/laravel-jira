@@ -1,6 +1,6 @@
 <?php
 
-namespace Univerze\Jira;
+namespace Leftbak\Jira;
 
 class Jira
 {

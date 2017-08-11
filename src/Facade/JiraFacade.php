@@ -1,6 +1,6 @@
 <?php
 
-namespace Univerze\Jira\Facade;
+namespace Leftbak\Jira\Facade;
 
 use Illuminate\Support\Facades\Facade;
 
