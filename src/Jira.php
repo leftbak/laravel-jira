@@ -8,16 +8,27 @@ class Jira
     /**
      * Search function to search issues with JQL string
      *
-     * @param null $jql
+     * @param null  $jql
+     * @param 0     $startAt
+     * @param 50    $maxResults
+     * @param null  $fields
      * @return mixed
      */
-    public static function search( $jql = NULL )
+    public static function search( $jql = NULL , $startAt = 0, $maxResults = 50, $fields = NULL)
     {
-        $data   = json_encode( array( 'jql' => $jql ) );
+        if($fields == NULL)
+        {
+            $data = json_encode( array( 'jql' => $jql, 'startAt' => $startAt, 'maxResults' => $maxResults));
+        }
+        else
+        {
+            $data = json_encode( array( 'jql' => $jql, 'startAt' => $startAt, 'maxResults' => $maxResults, 'fields' => $fields));
+        }
         $result = self::request( 'search', $data );
 
         return json_decode( $result );
     }
+
 
     /**
      * Create function to create a single issue from array data
